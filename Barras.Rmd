@@ -1,0 +1,67 @@
+---
+title: "1.Barras"
+author: "Andrea Quishpe"
+date: "2023-11-04"
+output: github_document
+---
+
+```{r}
+library(openxlsx)
+library(dplyr)
+library(fdth)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(stargazer)
+```
+
+```{r}
+#CONEXIÓN XLSX
+
+datos <- read.xlsx("D:/Escritorio/Cdatos/empresas_HEBM18.xlsx", na.strings = T)
+datos <-  datos %>% filter(complete.cases(.)) #filtra la bdd para que quede con datos completos
+```
+
+```{r}
+#TABLA DE DATOS
+nuevadata <- datos %>% 
+  select(NOMBRE, REGIÓN,PROVINCIA,CIUDAD,INGRESOS,CANT..EMPLEADOS,UTILIDAD) %>% 
+  filter(REGIÓN=="SIERRA",INGRESOS <=100000 & INGRESOS > 10000)
+  
+nuevadata$INGRESOS <- nuevadata$INGRESOS/1000
+nuevadata$UTILIDAD <- nuevadata$UTILIDAD/1000  
+
+tabla_frecuencia <- fdt(nuevadata$INGRESOS,start = 10,end = 100,h=10)
+tabla_frecuencia1 <- data.frame(tabla_frecuencia$table)
+tabla_frecuencia1$rango <- seq(20,100,10)
+tabla_frecuencia1$cf... <- round(tabla_frecuencia1$cf..., 0)
+
+
+View(tabla_frecuencia1)
+
+```
+
+```{r}
+#PLOT
+g2 <- ggplot(data=tabla_frecuencia1, 
+       aes(x=seq(10,90,10),
+           y=cf...))+
+  geom_bar(stat = "identity", fill="skyblue")+
+  geom_text(aes(label=cf...), position = "identity",vjust=0,size=6)+
+  geom_line()+geom_point()+
+  theme(axis.text.x = element_text(size = 12, angle = 0))+
+  labs(title = "Frecuencia relativa acumulada de los ingresos anuales", subtitle = "Pequeñas empresas Región Sierra del Ecuador")+
+  xlab("Ingresos por rango en miles")+
+  ylab("Distribución acumilada %")
+g2 
+
+
+```
+
+
+
+
+
+
+ 
+

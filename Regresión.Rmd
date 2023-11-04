@@ -1,0 +1,49 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+install.packages("lmtest")
+---
+title: "RegresiónSimple"
+author: "Andrea Quishpe"
+date: "2023-11-04"
+output: html_document
+---
+```{r}
+library(openxlsx)
+library(dplyr)
+library(fdth)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(stargazer)
+library(lmtest)
+```
+```{r}
+#CONEXIÓN XLSX
+setwd("D:/Escritorio/Cdatos/")
+datos <- read.xlsx("empresas_HEBM18.xlsx")
+
+datos<- datos %>% 
+ 
+  filter( INGRESOS !=0 & CANT..EMPLEADOS!=0 & PROVINCIA=="GUAYAS")
+
+
+modelo <- lm(INGRESOS~ CANT..EMPLEADOS  #Igresos vs C
+             ,data=datos)
+summary(modelo)
+
+stargazer(modelo, title = "Modelo de regresión simple", type = "text")
+dwtest(modelo)
+bptest(modelo)
+#QUEMAR EL MOTOR DE CÁLCULO
+#MOTOR DE CÁLCULO -> algoritmo
+
+nuevadata <- head(datos)
+predict(modelo, nuevadata)
+
+
+
+```
+
