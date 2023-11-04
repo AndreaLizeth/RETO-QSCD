@@ -14,8 +14,8 @@ Sigue las instrucciones:
 2. Realiza una regresión simple que explique el ingreso en función de la cantidad de empleados. Para efectos del ejercicio, se debe filtrar los casos cuyo ingreso y cantidad de empleados sea igual a 0. La regresión sólo debe construirse usando la provincia del Guayas. Se debe reportar los resultados, la interpretación de los coeficientes, las pruebas de autocorrelación, heterocedasticidad.
 
 ![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/63e6649d-680b-4062-86c1-ac798a9acb57)
-S![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/57a6d3b2-fa85-4892-8c4d-10a12dfd47f1)
-S![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/12670f87-7cfb-4827-bd15-ab4408cc1a7a)
+![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/57a6d3b2-fa85-4892-8c4d-10a12dfd47f1)
+![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/12670f87-7cfb-4827-bd15-ab4408cc1a7a)
 ![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/3e45ff9a-0367-450f-932d-e7000e9120d6)
 
 
