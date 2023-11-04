@@ -28,6 +28,7 @@ Resultados:
   Min      1Q  Median      3Q     Max 
   
 -439268 -193574  -76563  138947 4093811 
+
 Coefficients:
 
 
