@@ -20,14 +20,21 @@ Resultados:
  Coefficients:
     
 * (Intercept)     352108.24    3068.54  114.75  < 2e-16 ***
+  
 Este valor representa el ingreso esperado cuando el número de empleados es 0.
+
 * CANT..EMPLEADOS    483.54      68.68    7.04 2.12e-12 ***
+  
 Indica que por cada aumento de empleados, se espera un aumento de Ingresos de 483.54
 
 Pruebas de Autocorrelación y Heterocedasticidad
+
 * Durbin-Watson test
+  
   data:  modelo
+  
   DW = 1.5408, p-value < 2.2e-16
+  
 Presencia de correlación positiva
 
 * studentized Breusch-Pagan test
