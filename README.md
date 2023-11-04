@@ -36,3 +36,4 @@ Sigue las instrucciones:
 3. Realiza el mismo ejercicio del enunciado anterior, pero para pichincha. En este caso, sólo reporta los resultados y la explicación de los coeficiente.
  
 
+![image](https://github.com/AndreaLizeth/RETO-QSCD/assets/38335472/66952227-eb76-4166-b93d-598e715cd640)
