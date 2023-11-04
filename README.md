@@ -25,6 +25,11 @@ Resultados:
   
 * Residuals:
 
+| Name     | Character |
+| ---      | ---       |
+| Backtick | `         |
+| Pipe     | \|        |
+
  | Min |     1Q|  Median  |    3Q   |  Max |
  
  | --- | --- | --- | --- | --- |
