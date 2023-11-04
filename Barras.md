@@ -110,4 +110,4 @@ g2 <- ggplot(data=tabla_frecuencia1,
 g2 
 ```
 
-![](Barras_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](unnamed-chunk-4-1.png)<!-- -->
